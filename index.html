@@ -2,45 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Google Search</title>
+    <title>Custom Google Search</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
             text-align: center;
-            margin-top: 200px;
         }
         .top-links {
             position: absolute;
-            top: 10px;
-            right: 20px;
+            top: 15px;
+            right: 25px;
         }
         .top-links a {
-            margin-left: 15px;
+            margin-left: 20px;
             text-decoration: none;
             color: #1a73e8;
             font-size: 14px;
         }
+        h1 {
+            font-size: 60px;
+            font-weight: normal;
+            color: #4285f4; /* blue-like logo color */
+            margin-top: 150px;
+            letter-spacing: -2px;
+        }
+        .search-container {
+            margin-top: 30px;
+        }
         input[type="text"] {
-            width: 500px;
-            padding: 10px;
-            border-radius: 25px;
-            border: 1px solid #ccc;
+            width: 550px;
+            padding: 12px 20px;
             font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 50px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border: 1px solid #4285f4;
+            box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
         }
         .buttons {
-            margin-top: 20px;
+            margin-top: 30px;
         }
         input[type="submit"] {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            padding: 10px 20px;
             margin: 5px;
-            padding: 8px 16px;
             font-size: 14px;
-            border: none;
-            background-color: #f2f2f2;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         input[type="submit"]:hover {
-            background-color: #e2e2e2;
+            background-color: #f1f3f4;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -50,13 +70,15 @@
         <a href="advanced.html">Advanced Search</a>
     </div>
 
-    <h1>Google</h1>
-    <form action="https://www.google.com/search" method="get">
-        <input type="text" name="q" placeholder="Search Google">
-        <div class="buttons">
-            <input type="submit" value="Google Search">
-            <input type="submit" name="btnI" value="I'm Feeling Lucky">
-        </div>
-    </form>
+    <h1>MyGoogle</h1>
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="get">
+            <input type="text" name="q" placeholder="Search Google">
+            <div class="buttons">
+                <input type="submit" value="Google Search">
+                <input type="submit" name="btnI" value="I'm Feeling Lucky">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
