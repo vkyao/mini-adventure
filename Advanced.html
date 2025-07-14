@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Advanced Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .top-links {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .top-links a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #1a73e8;
+            font-size: 14px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"] {
+            width: 400px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            background-color:blue;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #1558b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-links">
+        <a href="index.html">Google Search</a>
+    </div>
+
+    <h1>Google Advanced Search</h1>
+    <form action="https://www.google.com/search" method="get">
+        <label>Find pages with all these words:</label>
+        <input type="text" name="as_q">
+
+        <label>Find pages with this exact word or phrase:</label>
+        <input type="text" name="as_epq">
+
+        <label>Find pages with any of these words:</label>
+        <input type="text" name="as_oq">
+
+        <label>Find pages with none of these words:</label>
+        <input type="text" name="as_eq">
+
+        <div class="buttons">
+            <input type="submit" value="Advanced Search">
+        </div>
+    </form>
+</body>
+</html>
